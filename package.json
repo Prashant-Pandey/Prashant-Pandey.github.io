@@ -1,0 +1,23 @@
+{
+  "name": "prashant_pandey_portfolio",
+  "version": "1.0.0",
+  "description": "it contains cv and other hiring information",
+  "main": "index.html",
+  "dependencies": {
+    "typed.js": "^2.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prashant-Pandey/Prashant-Pandey.github.io.git"
+  },
+  "author": "Prashant Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prashant-Pandey/Prashant-Pandey.github.io/issues"
+  },
+  "homepage": "https://github.com/Prashant-Pandey/Prashant-Pandey.github.io#readme"
+}

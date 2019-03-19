@@ -260,72 +260,60 @@ a:focus {
 }
 
 /*--------------------------------------- Navigation section -----------------------------------------*/
-.custom-navbar {
-    margin-bottom: 0;
-    background-color: #ffffff;
+.custom-navbar-build{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+    z-index: 100;   
 }
 
-.custom-navbar .navbar-brand {
-    color: #333;
-    text-shadow: 1px 1px #fff;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 35px;
-    letter-spacing: 1px;
+.custom-navbar-build .navbar-background-image{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    z-index: -10;
+    top: -21px;
 }
 
-.custom-navbar .nav li a {
-    color: #666;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    line-height: 40px;
-    transition: all 0.4s ease-in-out;
+.custom-navbar-build .left .navbar-background-image{
+    left: 5px;
 }
 
-.custom-navbar .nav li a:hover {
-    background: transparent;
-    color: #E3AE57;
+.custom-navbar-build .right .navbar-background-image{
+    right: 5px;
+
 }
 
-.custom-navbar .navbar-nav>li>a:hover,
-.custom-navbar .navbar-nav>li>a:focus {
-    background-color: transparent;
+.custom-navbar-build .left h3{
+   color: #f0f0f0;
+   padding: 55px 0 0 20px;
 }
 
-.custom-navbar .nav li.active>a {
-    background-color: transparent;
-    color: #E3AE57;
-}
+.custom-navbar-build .right h3{
+    color: #f0f0f0;
+    padding: 60px 20px 0 0;
+    font-size: 23px;
+ }
 
-.custom-navbar .navbar-toggle {
-    border: none;
-    padding-top: 10px;
-}
+ @media (max-width:767px){
+    .custom-navbar-build .left h3{
+        padding: 28px 0 0 20px;
+     }
+     
+     .custom-navbar-build .right h3{
+         padding: 30px 20px 0 0;
+      }
+ }
 
-.custom-navbar .navbar-toggle {
-    background-color: transparent;
-}
-
-.custom-navbar .navbar-toggle .icon-bar {
-    background: #E3AE57;
-    border-color: transparent;
-}
-
-@media(min-width:768px) {
-    .custom-navbar {
-        padding: 12px 0;
-        border-bottom: 0;
-        background: 0 0;
+ /* @media(max-width:375px){
+    .custom-navbar-build .navbar-background-image{
+        display: none;
     }
-
-    .custom-navbar.top-nav-collapse {
-        background: #ffffff;
-        box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
-        padding: 0;
-    }
-}
+ } */
 
 /*--------------------------------------- Home section -----------------------------------------*/
 #home h1 {
@@ -366,6 +354,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
     /* position: absolute;
     width: 100%;
     height: 100%;
@@ -474,40 +463,108 @@ canvas {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     height: 100vh;
-    padding: 0 45px 0 45px;
+    width: 100%;
+    /* padding: 0 45px 0 45px; */
 }
+
+/**
+body
+*/
+ .profile-image{
+     max-height: 200px;
+     max-width: 200px;
+ }
+
+ /**
+ 
+ social media icons
+ 
+ **/
+
+ /* .social-media-links a.fa::before{
+     height: 100px;
+ } */
+
+ .fa-facebook-square{
+     color: #4267B2;
+ }
+
+ .fa-twitter-square{
+     color: #55acee;
+ }
+
+ .fa-github-square{
+     color: #34465d
+ }
+
+ .fa-linkedin-square{
+     color: #0077B5
+ }
 
 /*--------------------------------------- About section -----------------------------------------*/
-#about .about-img {
-    background: url('../images/Profile Pic.jpg') no-repeat;
+.skills{
+    /* padding-left: 25px; */
 }
 
-#about .about-thumb,
-#about .skill-thumb {
-    padding: 22px 32px 32px 32px;
-}
-
-#about .progress {
-    background: #ffffff;
+.progress {
+    background: #ddd;
     border-radius: 0px;
     box-shadow: none;
     height: 2px;
 }
 
-#about .progress-bar-primary {
+.progress-bar-primary {
     background: #232B2B;
 }
 
-#about strong,
-#about span {
-    font-weight: bold;
-    display: inline-block;
-    padding-bottom: 8px;
+/**
+work experience
+*/
+
+.work-exp-logo{
+    height: 7rem;
+    width: 7rem;
+    background-color: #ddd;
+    padding: 1rem;
+}
+
+/**
+Projects
+*/
+.project-card{
+    max-width: 370px;
+}
+
+.card-img-overlay.card-content{
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.7s;
+}
+
+.project-card:hover .card-content{
+    opacity: 1;
+
+}
+
+.card-content .techstack-items li{
+    background-color: #000;
+    font-size: 17px;
+    padding: 1px 8px 1px 8px;
+    margin-right: 8px;
+}
+
+.academic-background .figure-img{
+    height: 200px;
+    width: auto;
 }
 
 /*--------------------------------------- Service section -----------------------------------------*/
@@ -673,7 +730,7 @@ canvas {
 }
 
 /*--------------------------------------- Footer section -----------------------------------------*/
-footer {
+footer.base-footer {
     padding: 140px 0px;
 }
 
