@@ -40,15 +40,12 @@
       <div id="particles-js"></div>
       <div class="home-thumb">
         <nav class="row d-flex custom-navbar-build">
-          <div class="left">
-            <div class="left nav-cloud"></div>
-            <img class="img-fluid navbar-background-image" src="images/cloud.png" alt="">
+          <a class=" button contact" href="#contact_modal" data-toggle="modal" data-target="#contact_modal">
             <h3>Contact me</h3>
-          </div>
-          <div class="right">
-            <img class="img-fluid navbar-background-image" src="images/cloud.png" alt="">
+          </a>
+          <a class="cv" href="http://bit.ly/PrashantPandeyResume">
             <h3>Download CV</h3>
-          </div>
+          </a>
         </nav>
         <div class="d-flex justify-content-center">
           <h1 class="wow fadeInUp introductionTyping" data-wow-delay="0.6s"></h1>
@@ -84,6 +81,45 @@
     </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="wow fadeInUp modal-title section-title p-0"  id="contact_modalLabel" data-wow-delay="0.2s">
+              <h1 class="color-yellow">Ping Me</h1>
+            </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="contact-form">
+            <div id="contact-form">
+              <form action="https://formspree.io/prashant.pandey.dev@gmail.com" method="POST">
+                <div class="wow fadeInUp" data-wow-delay="1s"> <input name="fullname" type="text" class="form-control"
+                    id="fullname" placeholder="Your Name"> </div>
+                <div class="wow fadeInUp" data-wow-delay="1.2s"> <input name="email" type="email" class="form-control mt-2"
+                    id="email" placeholder="Your Email"> </div>
+                <div class="wow fadeInUp" data-wow-delay="1.4s"> <textarea name="message" rows="5" class="form-control mt-2"
+                    id="message" placeholder="Write your story..."></textarea> </div>
+                <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s"> <input name="submit" type="submit"
+                    class="form-control mt-2" id="submit" value="Send"> </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
   <section class="body-part parallax-section" id="about">
     <div class="row">
       <div class="col-md-4">
@@ -153,7 +189,7 @@
       </div>
       <div class="col-md-8">
         <!-- introduction -->
-        <div class="row d-flex flex-column pr-5">
+        <div class="row d-flex flex-column pr-5 mt-5">
           <h3>Introduction</h3>
           <p class="wow fadeInUp text-justify" data-wow-delay="0.9s"> I'm a Web Front End, Backend and Android app
             Developer. Moreover, I'm extremely passionate about web development and design in all it’s forms and
@@ -169,7 +205,7 @@
         <div class="row d-flex flex-column pr-5">
           <h3>Work Experience</h3>
           <!-- youstart labs -->
-          <div class="row d-flex">
+          <div class="row d-flex flex-wrap">
             <figure class="figure d-flex flex-column">
               <img src="images/youstart education.png" class="figure-img img-fluid rounded m-auto work-exp-logo" alt="">
               <figcaption class="figure-caption text-xs-right">
@@ -179,11 +215,11 @@
             <div class="work-exp-content d-flex flex-column">
               <div class="work-exp-dates"><b><abbr title="Duration">(3 Jan 2018 - 3 July 2018)</abbr></b></div>
               <div class="work-exp-responsibilities">
-                <h4>Responsibilities : </h4>
+                <h4>Tech Profile : </h4>
                 <ul class="list-group ml-5">
-                  <li>one</li>
-                  <li>two</li>
-                  <li>three</li>
+                  <li>Android Application Development</li>
+                  <li>React Native</li>
+                  <li>Node JS</li>
                 </ul>
               </div>
             </div>
@@ -194,33 +230,35 @@
           <h3>Projects</h3>
           <div class="row d-flex flex-row">
             <!-- synonymer -->
-            <div class="card project-card">
-              <img class="card-img" src="images/list.jpg" alt="">
+            <div class="card project-card pr-1">
+              <img class="card-img" src="images/MIRROR APP.jpg" alt="">
               <div class="card-img-overlay card-content">
-                <h3 class="card-title color-white">Synonymer</h5>
+                <h3 class="card-title color-white">MIRROR APP</h5>
                   <!-- <p class="card-text d-flex flex-column"></p> -->
                   <div class="mt-0">
                     <h5 class="color-white">Tech Sheet</h5>
-                    <ul class="list-unstyled techstack-items d-flex flex-row">
+                    <ul class="list-unstyled techstack-items d-flex flex-row flex-wrap">
                       <li class="color-yellow">Android Studio</li>
                       <li class="color-yellow">Java</li>
-                      <li class="color-yellow">Firebase</li>
+                      <li class="color-yellow">Camera 2 API</li>
+                      <li class="color-yellow">Firebase App Indexing</li>
+                      <li class="color-yellow">Google Adword</li>
                     </ul>
                   </div>
               </div>
             </div>
             <!-- triptrego -->
-            <div class="card project-card">
-              <img class="card-img" src="images/list.jpg" alt="">
+            <div class="card project-card" onclick="location.href='https\:\/\/github.com\/Prashant-Pandey\/BookThis'">
+              <img class="card-img" src="images/BookThis.jpg" alt="">
               <div class="card-img-overlay card-content">
-                <h3 class="card-title color-white">TripTrego</h5>
+                <h3 class="card-title color-white">BookThis</h5>
                   <!-- <p class="card-text d-flex flex-column"></p> -->
                   <div class="mt-0">
                     <h5 class="color-white">Tech Sheet</h5>
-                    <ul class="list-unstyled techstack-items d-flex flex-row">
-                      <li class="color-yellow">Android Studio</li>
-                      <li class="color-yellow">Java</li>
+                    <ul class="list-unstyled techstack-items d-flex flex-row flex-wrap">
+                      <li class="color-yellow">JavaScript</li>
                       <li class="color-yellow">Firebase</li>
+                      <li class="color-yellow">Cross Browser Extension</li>
                     </ul>
                   </div>
               </div>
@@ -256,19 +294,31 @@
           <h3>Recommendations</h3>
           <div class="card ml-5 mr-5 mb-2 mt-2">
             <div class="card-body">
-              <p class="card-text"><blockquote class="blockquote">
-                <p class="mb-0 text-justify">Prashant has a good energy and works enthusiastically towards any project. He inspires people around him to work together and has a good confidence. He is always curious about technologies and keep learning new things.</p>
-                <footer class="blockquote-footer"><cite title="Source Title">Mr. Abhishek Rathore</cite>&nbsp;&nbsp;CEO, Youstart Labs Pvt. Ltd.</footer>
-              </blockquote></p>
+              <p class="card-text">
+                <blockquote class="blockquote">
+                  <p class="mb-0 text-justify">Prashant has a good energy and works enthusiastically towards any
+                    project. He inspires people around him to work together and has a good confidence. He is always
+                    curious about technologies and keep learning new things.</p>
+                  <footer class="blockquote-footer"><cite title="Source Title">Mr. Abhishek Rathore</cite>&nbsp;&nbsp;CEO,
+                    Youstart Labs Pvt. Ltd.</footer>
+                </blockquote>
+              </p>
             </div>
           </div>
           <div class="card ml-5 mr-5 mb-2 mt-2">
             <div class="card-body">
-              <p class="card-text"><blockquote class="blockquote">
-                <p class="mb-0 text-justify">Prashant has the ability to comprehend conceptual ideas and make crucial inferences on the basis of the theory is remarkable. Over and over he has come up with innovative and interesting solutions to the problems that he comes across. He is self-motivated, goal oriented, hard working and fervent towards the tasks assigned to him. His most inspiring quality is that he makes it a point to finish what he starts.
-                </p>
-                <footer class="blockquote-footer"><cite title="Source Title">Ms. Shivangi Dheer</cite>&nbsp;&nbsp;Assistant Professor, JECRC University, Jaipur</footer>
-              </blockquote></p>
+              <p class="card-text">
+                <blockquote class="blockquote">
+                  <p class="mb-0 text-justify">Prashant has the ability to comprehend conceptual ideas and make crucial
+                    inferences on the basis of the theory is remarkable. Over and over he has come up with innovative
+                    and interesting solutions to the problems that he comes across. He is self-motivated, goal
+                    oriented, hard working and fervent towards the tasks assigned to him. His most inspiring quality is
+                    that he makes it a point to finish what he starts.
+                  </p>
+                  <footer class="blockquote-footer"><cite title="Source Title">Ms. Shivangi Dheer</cite>&nbsp;&nbsp;Assistant
+                    Professor, JECRC University, Jaipur</footer>
+                </blockquote>
+              </p>
             </div>
           </div>
         </div>

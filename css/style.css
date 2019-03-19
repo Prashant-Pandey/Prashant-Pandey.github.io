@@ -262,33 +262,28 @@ a:focus {
 /*--------------------------------------- Navigation section -----------------------------------------*/
 .custom-navbar-build{
     display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	align-items: stretch;
     align-content: stretch;
     width: 100%;
     z-index: 100;   
 }
 
-.custom-navbar-build .navbar-background-image{
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    z-index: -10;
-    top: -21px;
+.custom-navbar-build a{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 21px 0px 21px;
+    margin: 3px;
+    border-radius: 4px;
 }
 
-.custom-navbar-build .left .navbar-background-image{
-    left: 5px;
+.custom-navbar-build h3{
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.custom-navbar-build .right .navbar-background-image{
-    right: 5px;
-
-}
-
-.custom-navbar-build .left h3{
+/* .custom-navbar-build .left h3{
    color: #f0f0f0;
    padding: 55px 0 0 20px;
 }
@@ -297,17 +292,7 @@ a:focus {
     color: #f0f0f0;
     padding: 60px 20px 0 0;
     font-size: 23px;
- }
-
- @media (max-width:767px){
-    .custom-navbar-build .left h3{
-        padding: 28px 0 0 20px;
-     }
-     
-     .custom-navbar-build .right h3{
-         padding: 30px 20px 0 0;
-      }
- }
+ } */
 
  /* @media(max-width:375px){
     .custom-navbar-build .navbar-background-image{
@@ -559,7 +544,7 @@ Projects
     background-color: #000;
     font-size: 17px;
     padding: 1px 8px 1px 8px;
-    margin-right: 8px;
+    margin: 0 8px 3px 0;
 }
 
 .academic-background .figure-img{

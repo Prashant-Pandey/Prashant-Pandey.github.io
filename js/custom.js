@@ -198,6 +198,11 @@
     typeSpeed: 0.1
   });
 
+  // contact modal
+  $('#contact_modal').on('shown.bs.modal', function () {
+    $('#fullname').trigger('focus')
+  })
+
 
   });
 
