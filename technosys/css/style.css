@@ -35,6 +35,9 @@ body{
 .top-nav a {
     margin: 0 10px 0 0;
     border-bottom: 1px solid #dddddd;
+    font-family: 'GrundschriftRegular';
+    font-weight: normal;
+    font-style: normal; 
 }
 
 .mid-nav {
@@ -61,6 +64,9 @@ body{
 .bottom-nav a {
     margin: 0 0.5em;
     border-bottom: 1px solid #dddddd;
+    font-family: 'GrundschriftRegular';
+    font-weight: normal;
+    font-style: normal; 
 }
 
 .share-us-nav {
