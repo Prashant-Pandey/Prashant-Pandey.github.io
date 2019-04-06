@@ -778,6 +778,10 @@ footer.base-footer {
         line-height: 18px;
     }
 
+    .generic-padding-sm-devices{
+        padding: 0 36px;
+    }
+
     #home .home-thumb {
         height: auto;
         padding-top: 32px;
@@ -816,3 +820,4 @@ footer.base-footer {
         padding: 40px 0;
     }
 }
+
