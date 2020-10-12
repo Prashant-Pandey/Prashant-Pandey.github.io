@@ -1,0 +1,303 @@
+
+
+@media(min-width:1024px) {
+  .nav-items.small-devices{
+    display: none;
+  }
+  #main-nav ul .nav-items,  #main-nav ul .nav-items a{
+    padding: 1em 0.6em;
+    font-weight: 800;
+    background-color: rgb(255 254 242);
+    color: #969589;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em;
+    position: relative;
+    margin-top: 5em;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 1.4rem;
+  }
+  #profile-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #profile-img img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 100%;
+  }
+  #profile-img figcaption {
+    padding-top: 0.4em;
+    font-size: 2.2em;
+  }
+  .side-content .social-media-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .side-content>div {
+    margin-top: 1.6rem;
+  }
+  .social-media-links ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .social-media-links ul li {
+    margin: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .social-media-links ul li a {
+    text-decoration: none;
+  }
+  #contact-details {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-details .side-content-title {
+    padding: 0.4em 0;
+  }
+  #contact-details #location {
+    font-size: 1.8em;
+  }
+  #contact-details p {
+    font-size: 1.6em;
+    padding-left: 1rem;
+    margin: 0.2rem 0;
+    text-align: center;
+  }
+  #contact-details p a {
+    text-decoration: none;
+    color: #035a83;
+  }
+  #interests .interests-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #interests figure {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  #interests figure img {
+    width: 4em;
+    height: 4em;
+  }
+  #interests figure figcaption {
+    font-size: 1.6em;
+    margin: 0.6rem 1rem;
+    font-weight: 700;
+  }
+  #skills {
+    display: flex;
+    flex-direction: column;
+  }
+  #skills .sub-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 8px 0;
+  }
+  #skills .sub-content h4 {
+    font-size: 1.6em;
+    padding: 0 0.3em;
+  }
+  #skills .sub-content h4::after {
+    content: ':';
+  }
+  #skills .sub-content i {
+    margin: 0 8px;
+  }
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1fr;
+    gap: 0.3em 0.3em;
+    grid-template-areas: "." ".";
+  }
+  .main-content-title {
+    font-size: 3em;
+    font-weight: 800;
+    color: #969589;
+  }
+  #projects-showcase {
+    margin-top: 1em;
+  }
+  #projects-showcase .project-card {
+    padding: 0 0.6em;
+    cursor: pointer;
+    border: 1px solid #000000;
+    height: 20rem;
+    margin-right: 1rem;
+    font-family: "VT323", monospace;
+    background-color: rgb(255, 255, 255);
+    color: #a7a7a7;
+  }
+  #projects-showcase .project-card figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #projects-showcase .project-card img {
+    max-width: 34em;
+    padding: 0 1em;
+  }
+  .project-card figcaption.tech-stack-heading {
+    font-size: 1.5em;
+  }
+  .project-card .tech-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    font-size: 2em;
+    margin-left: 1em;
+  }
+  .project-card .tech-stack li {
+    list-style-type: disc;
+  }
+  .academic-bg-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .academic-bg-list li:first {
+    margin-left: 0;
+  }
+  .academic-bg-list li {
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: #d8d8d8 15px 18px 25px;
+    background-color: #fffbfb;
+    border-radius: 1rem;
+  }
+  .academic-bg-list li figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .academic-bg-list .college-logo {
+    height: 12em;
+  }
+  .academic-bg-list figcaption {
+    font-size: 2rem;
+  }
+  .academic-bg-list h4 {
+    font-size: 1.6rem;
+  }
+  .academic-bg-list h5 {
+    font-size: 1.4rem;
+  }
+  .academic-bg-list h6 {
+    font-size: 1.2rem;
+  }
+  .academic-bg-list .center {
+    text-align: center;
+  }
+  .disabled {
+    opacity: 0.5;
+  }
+  article {
+    margin-top: 1em;
+    /* border-bottom: #007bb5 1px solid; */
+    padding-bottom: 2em;
+  }
+  .talk-bubble {
+    margin: 40px 0;
+    display: inline-block;
+    position: relative;
+    width: 75ch;
+    height: auto;
+    background-color: #666;
+    color: #ffffff;
+    font-size: 1.4rem;
+    box-shadow: #a0a0a0 3px 5px 44px
+  }
+  .round {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+  }
+  .tri-right.border.btm-left:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -8px;
+    right: auto;
+    top: auto;
+    bottom: -40px;
+    border: 32px solid;
+    border-color: transparent transparent transparent #666;
+  }
+  .tri-right.btm-left:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent transparent transparent #666;
+  }
+  .talktext {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.3em;
+    text-align: justify;
+  }
+  #recommendations .recommendation-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #recommendations .recommendation {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  #recommendations .recommender {
+    margin-top: -26px;
+    margin-left: 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  footer {
+    display: grid;
+    place-items: center;
+    height: 100px;
+    background-color: rgb(251 249 230);
+    font-size: 1.3rem;
+    z-index: 100;
+    perspective: 100;
+  }
+}
+
+@media(max-width: 2000px) {
+  .corner-margin {
+    margin-left: 2rem;
+  }
+}
+

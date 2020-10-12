@@ -1,0 +1,26 @@
+.unc-charlote {
+  color: #035a83;
+}
+
+.unc-charlote::before {
+  background-image: repeating-linear-gradient(-24deg,rgb(255 254 242),rgb(255 254 242) 3px, #035a83 0, #035a83 4px);
+  border: 1px solid #035a83;
+}
+
+.appzly-inc {
+  color: #2647A3;
+}
+
+.appzly-inc::before {
+  background-image: repeating-linear-gradient(-24deg,rgb(255 254 242),rgb(255 254 242) 3px, #2647A3 0, #2647A3 4px);
+  border: 1px solid #2647A3;
+}
+
+.technosys-technologies {
+  color: #0093DD;
+}
+
+.technosys-technologies::before {
+  background-image: repeating-linear-gradient(-24deg, rgb(255 254 242), rgb(255 254 242) 3px, #0093DD 0, #0093DD 4px);
+  border: 1px solid #0093DD;
+}

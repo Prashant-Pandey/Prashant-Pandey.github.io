@@ -14,349 +14,370 @@
   <meta name="author" content="Prashant Pandey">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Prashant Pandey</title>
-  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="./fonts/VTSFonts.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css' />
+  <link rel="stylesheet" href="./css/common-screen.css">
+  <link rel="stylesheet" href="./css/large-screen.css" media="screen and (min-width: 1024px)">
+  <!-- media="max-width:1024px" -->
+  <link rel="stylesheet" href="./css/small-screen.css" media="screen and (max-width: 1024px)">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+  <meta name="theme-color" content="#4285f4">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css' />
 </head>
 
-<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<body id="body">
   <div class="preloader">
     <div class="spinner"> <span class="spinner-rotate"></span> </div>
   </div>
-  <!-- <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
-    <div class="container">
-      <div class="navbar-header"> <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span>
-        </button> </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home" class="smoothScroll">Home</a></li>
-          <li><a href="#about" class="smoothScroll">About Me</a></li>
-          <li><a href="#experience" class="smoothScroll">Experiences</a></li>
-          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
-  <section id="home" class="parallax-section">
-    <div class="">
-      <div id="particles-js"></div>
-      <div class="home-thumb">
-        <nav class="row d-flex custom-navbar-build">
-          <a class=" button contact" href="#contact_modal" data-toggle="modal" data-target="#contact_modal">
-            <h3>Contact me</h3>
-          </a>
-          <a class="cv" href="http://bit.ly/PrashantPandeyResume">
-            <h3>Download CV</h3>
-          </a>
-        </nav>
-        <div class="d-flex justify-content-center">
-          <h1 class="wow fadeInUp introductionTyping" data-wow-delay="0.6s">Prashant Pandey</h1>
-        </div>
-        <div class="row">
-          <a href="#about" class="wow fadeInUp smoothScroll" data-wow-delay="1.4s">
-            <div class="scrolldown-container-body">
-              <div class="container-scrolldown">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <span class="text-scrolldown">Scroll down</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
+  <div id="particles-js">
+    </canvas>
+  </div>
+  <header>
+    <!-- <canvas id="website-title">&lt;Prashant Pandey&gt;</canvas> -->
+    <nav id="main-nav">
+      <ul>
+        <li class="nav-items small-devices">Prashant Pandey</li>
+        <li class="nav-items" id="contactMe">Contact Me!</li>
+        <li class="nav-items"><a href="./resume/Prashant-Pandey-Resume.pdf" target="_blank" rel="noopener noreferrer"
+            download>Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Modal -->
   <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="wow fadeInUp modal-title section-title p-0" id="contact_modalLabel" data-wow-delay="0.2s">
-            <h1 class="color-yellow">Ping Me</h1>
-          </div>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>&nbsp;</div>
+        <span class="modal-heading">
+          <h1>Ping Me</h1>
+        </span>
+        <div class="modal-close">
+          <a type="button" class="close far fa-window-close" data-dismiss="modal" aria-label="Close">
+          </a>
         </div>
-        <div class="modal-body">
-          <div class="contact-form">
-            <div id="contact-form">
-              <form action="https://formspree.io/prashant.pandey.dev@gmail.com" method="POST">
-                <div class="wow fadeInUp" data-wow-delay="1s"> <input name="fullname" type="text" class="form-control"
-                    id="fullname" placeholder="Your Name"> </div>
-                <div class="wow fadeInUp" data-wow-delay="1.2s"> <input name="email" type="email"
-                    class="form-control mt-2" id="email" placeholder="Your Email"> </div>
-                <div class="wow fadeInUp" data-wow-delay="1.4s"> <textarea name="message" rows="5"
-                    class="form-control mt-2" id="message" placeholder="Write your story..."></textarea> </div>
-                <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s"> <input name="submit" type="submit"
-                    class="form-control mt-2" id="submit" value="Send"> </div>
-              </form>
-            </div>
-          </div>
+      </div>
+      <div class="modal-body">
+        <form id="contact-form">
+          <input name="fullname" type="text" id="fullname" placeholder="Your Name">
+          <input name="email" type="email" id="email" placeholder="Your Email">
+          <input type="tel" id="phone" name="phone" required placeholder="123-456-7890">
+          <textarea name="message" rows="5" id="message" placeholder="Write your story..."></textarea>
+          <input name="submit" type="submit" id="submit" value="Send">
+        </form>
+        <div id="form-success-message" class="common-message-style">
+          <p>
+            <i class="fas fa-check-square"></i>
+            Your message is sent to me successfully, I'll reply you ASAP!
+          </p>
+
         </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div> -->
+        <div id="form-error-message" class="common-message-style">
+          <p>
+            <i class="fas fa-bug"></i>
+            Some error occurred!!! I'll devote my time to solve the issue, meanwhile contact me at <a href="mailto:prashant.pandey.dev@gmail.com">prashant.pandey.dev@gmail.com</a>
+          </p>
+
+        </div>
       </div>
     </div>
   </div>
 
 
-  <section class="body-part parallax-section" id="about">
-    <div class="row">
-      <div class="col-md-4">
-        <!-- photo -->
-        <div class="row d-flex justify-content-center m-4">
-          <figure class="figure">
-            <img class="figure-img profile-image rounded-circle img-thumbnail" src="images/Profile Pic.jpg" alt="Prashant Pandey">
-            <figcaption class="figure-caption">Prashant Pandey</figcaption>
+  <section class="content-container">
+    <aside class="side-content">
+      <!-- photo -->
+      <figure id="profile-img">
+        <img src="images/Profile Pic.jpg" alt="Prashant Pandey">
+        <figcaption>Prashant Pandey</figcaption>
+      </figure>
+      <!-- social media links -->
+      <div class="social-media-links">
+        <h3 class="side-content-title">
+          Social Media
+        </h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/prashantpandey22" class="fab fa-facebook-square fa-5x facebook">
+            </a>
+          </li>
+          <li><a href="https://twitter.com/PrashantP_1996" class="fab fa-twitter-square fa-5x twitter">
+            </a></li>
+          <li>
+            <a href="https://github.com/Prashant-Pandey" class="fab fa-github-square fa-5x github">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/prashant-pandey-b070b5105/" class="fab fa-linkedin fa-5x linkedin">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- contact details -->
+      <div id="contact-details">
+        <h3 class="side-content-title">
+          Contact details
+        </h3>
+        <p id="location">Charlotte, NC</p>
+        <p><i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;&nbsp;<a href="tel:+19803131561">+1 (980) 313-1561</a></p>
+        <p><i class="fas fa-at"></i>&nbsp;&nbsp;&nbsp;<a style="font-size: smaller"
+            href="mailto:prashant.pandey.dev@gmail.com">prashant.pandey.dev@gmail.com</a></p>
+      </div>
+      <!-- interests -->
+      <div id="interests">
+        <h3 class="side-content-title">Interests</h3>
+        <div class="interests-content">
+          <figure>
+            <img src="./images/swimming.svg" alt="hobby swimming">
+            <figcaption>Swimming</figcaption>
+          </figure>
+          <figure>
+            <img src="./images/football.svg" alt="hobby swimming">
+            <figcaption>Football</figcaption>
+          </figure>
+          <figure>
+            <img src="./images/gym.svg" alt="hobby swimming">
+            <figcaption>Gymnesium</figcaption>
+          </figure>
+          <figure>
+            <img src="./images/technology.svg" alt="hobby swimming">
+            <figcaption>Emerging Tech</figcaption>
           </figure>
         </div>
-        <!-- contact details -->
-        <div class="row d-flex flex-column m-4 align-items-center align-content-center justify-content-center">
-          <h3 class="d-flex">
-            Contact details
-          </h3>
-          <div class="wow fadeInUp contact-info" data-wow-delay="0.6s">
-            <p>F3 E-74 Namo Road, Sector 5,<br />Near Bharadwaj Petrol Pump,<br />Malviya Nagar, Jaipur,
-              Rajasthan<br />302017</p>
-          </div>
-          <!-- d-flex flex-column align-items-center -->
-          <div class="wow fadeInUp" data-wow-delay="0.8s">
-            <p><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;+91-7987355529</p>
-            <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;&nbsp;<a style="font-size: smaller"
-                href="mailto:prashant.pandey.dev@gmail.com">prashant.pandey.dev@gmail.com</a></p>
-          </div>
-        </div>
-        <!-- social media links -->
-        <div class="row d-flex flex-column justify-content-center align-items-center social-media-links">
-          <h3 class="d-flex justify-content-center">
-            Social Media
-          </h3>
-          <div class="wow fadeInUp d-flex justify-content-center" data-wow-delay="0.6s">
-            <a href="https://www.facebook.com/prashantpandey22" class="fa fa-facebook-square fa-5x m-1">
-            </a>
-            <a href="https://twitter.com/PrashantP_1996" class="fa fa-twitter-square fa-5x m-1 ">
-            </a>
-          </div>
-          <div class="wow fadeInUp d-flex justify-content-center" data-wow-delay="0.7s">
-            <a href="https://plus.google.com/u/0/109914941613869643949" class="fa fa-github-square fa-5x m-1 ">
-            </a>
-            <a href="https://www.linkedin.com/in/prashant-pandey-b070b5105/" class="fa fa-linkedin-square fa-5x m-1 ">
-            </a>
-          </div>
-        </div>
-        <!-- skills -->
-        <div class="row d-flex flex-column skills mt-5 ml-2 mr-2 top-10">
-          <h3 class="d-flex justify-content-center">Skills</h3>
-          <h4>Front End</h4>
-          <div class="progress">
-            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-              aria-valuemax="100" style="width: 90%;"></div>
-          </div>
-          <h4>Back End</h4>
-          <div class="progress">
-            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-              aria-valuemax="100" style="width: 70%;"></div>
-          </div>
-          <h4>Android App Development</h4>
-          <div class="progress">
-            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-              aria-valuemax="100" style="width: 80%;"></div>
-          </div>
-        </div>
-        <!-- interests -->
-        <div class="row d-flex flex-column skills mt-5 ml-2 mr-2 top-10">
-          <h3 class="d-flex justify-content-center">Interests</h3>
-        </div>
       </div>
-      <div class="col-md-8">
-        <!-- introduction -->
-        <div class="row d-flex flex-column pr-5 mt-5 generic-padding-sm-devices">
-          <h3>Introduction</h3>
-          <p class="wow fadeInUp text-justify" data-wow-delay="0.9s"> I'm a Web Front End, Backend and Android app
-            Developer. Moreover, I'm extremely passionate about web development and design in all it’s forms and
-            helping small businesses by improving their online presence. <br />
-            <strong>My Responsibilities as web developer:</strong> Managing and Updating Angular Based Web Apps and
-            Node Based Backends, Developing React Native and Ionic Apps for both Android and IOS and also Native
-            Android apps, Collaborative Working in a team with the help of GitLab and coordinated with the help of
-            Trello.<br />
-            <b>Have completed my undergrad and will soon planning to start my next milestone in the USA</b>
-          </p>
-        </div>
-        <!-- work experience -->
-        <div class="row d-flex flex-column pr-5 generic-padding-sm-devices">
-          <h3>Work Experience</h3>
-          <!-- youstart labs -->
-          <div class="row d-flex flex-wrap">
-            <figure class="figure d-flex flex-column">
-              <img src="images/youstart education.png" class="figure-img img-fluid rounded m-auto work-exp-logo" alt="Prashant Pandey">
-              <figcaption class="figure-caption text-xs-right">
-                <h4><b>Youstart Education Pvt. Ltd.</b></h4>
+    </aside>
+    <div class="main-content">
+      <!-- projects -->
+      <article id="projects">
+        <h3 class="main-content-title">Projects</h3>
+        <div class="carousel" id="projects-showcase" data-flickity='{ "groupCells": true }'>
+          <div class="project-card carousel-cell">
+            <figure>
+              <img class="card-img" src="./images/mirror-app.png" alt="Prashant Pandey">
+              <figcaption class="tech-stack-heading">
+                <h5>Updating Projects...</h5>
               </figcaption>
+              <ul class="tech-stack">
+                <li>Awesome Projects</li>
+                <li>Inspiring Blog and Vlog</li>
+                <li>And more</li>
+              </ul>
             </figure>
-            <div class="work-exp-content d-flex flex-column justify-content-center">
-              <div class="work-exp-dates"><b><abbr title="Duration">(3 Jan 2018 - 3 July 2018)</abbr></b></div>
-              <div class="work-exp-responsibilities">
-                <h4>Tech Profile : </h4>
-                <ul class="list-group ml-5">
-                  <li>Android Application Development</li>
-                  <li>React Native</li>
-                  <li>Node JS</li>
-                </ul>
+          </div>
+        </div>
+      </article>
+      <!-- work experience -->
+      <article id="work-experience">
+        <h3 class="main-content-title">Work Experience</h3>
+        <!-- youstart labs -->
+        <div id="work-experiences">
+          <div class="work-experience corner-margin">
+            <div class="work-experience-shadow unc-charlote">
+              <div class="work-experience-content">
+                <figure>
+                  <img src="./images/unc_charlotte.jpg" alt="Prashant Pandey">
+                </figure>
+                <div class="work-exp-responsibilities">
+                  <span>(Jan 2020 - Dec 2020)</span>
+                  <h3>Graduate Teaching Assistant</h3>
+                  <h4>University of North Carolina at Charlotte</h4>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- projects -->
-        <div class="row d-flex flex-column">
-          <h3>Projects</h3>
-          <div class="row d-flex flex-row justify-content-center">
-            <!-- synonymer -->
-            <div class="card project-card pr-1">
-              <img class="card-img" src="images/MIRROR APP.jpg" alt="Prashant Pandey">
-              <div class="card-img-overlay card-content">
-                <h3 class="card-title color-white">MIRROR APP</h5>
-                  <!-- <p class="card-text d-flex flex-column"></p> -->
-                  <div class="mt-0">
-                    <h5 class="color-white">Tech Sheet</h5>
-                    <ul class="list-unstyled techstack-items d-flex flex-row flex-wrap">
-                      <li class="color-yellow">Android Studio</li>
-                      <li class="color-yellow">Java</li>
-                      <li class="color-yellow">Camera 2 API</li>
-                      <li class="color-yellow">Firebase App Indexing</li>
-                      <li class="color-yellow">Google Adword</li>
-                    </ul>
-                  </div>
+
+          <div class="work-experience">
+            <div class="work-experience-shadow appzly-inc">
+              <div class="work-experience-content">
+                <figure>
+                  <img src="./images/appzly.PNG" alt="appzly.inc">
+                </figure>
+                <div class="work-exp-responsibilities">
+                  <span>(Jul 2020 - Sep 2020)</span>
+                  <h3>Software Developer Intern</h3>
+                  <h4>Appzly Inc</h4>
+                </div>
               </div>
             </div>
-            <!-- triptrego -->
-            <div class="card project-card" onclick="location.href='https\:\/\/github.com\/Prashant-Pandey\/BookThis'">
-              <img class="card-img" src="images/BookThis.jpg" alt="Prashant Pandey">
-              <div class="card-img-overlay card-content">
-                <h3 class="card-title color-white">BookThis</h5>
-                  <!-- <p class="card-text d-flex flex-column"></p> -->
-                  <div class="mt-0">
-                    <h5 class="color-white">Tech Sheet</h5>
-                    <ul class="list-unstyled techstack-items d-flex flex-row flex-wrap">
-                      <li class="color-yellow">JavaScript</li>
-                      <li class="color-yellow">Firebase</li>
-                      <li class="color-yellow">Cross Browser Extension</li>
-                    </ul>
-                  </div>
+          </div>
+
+          <div class="work-experience corner-margin">
+            <div class="work-experience-shadow technosys-technologies">
+              <div class="work-experience-content">
+                <figure>
+                  <img src="./images/technosys.jpg" alt="Technosys Security Systems Pvt Ltd">
+                </figure>
+                <div class="work-exp-responsibilities">
+                  <span>(Sep 2018 - Jun 2019)</span>
+                  <h3>Full Stack Engineer</h3>
+                  <h4>Technosys Security Pvt. Ltd.</h4>
+                </div>
               </div>
             </div>
-            <!-- other project -->
           </div>
-        </div>
-        <!-- academic backgrounds -->
-        <div class="row mt-5 d-flex flex-column academic-background">
-          <h3>Academic Background</h3>
-          <div class="d-flex flex-wrap justify-content-around generic-padding-sm-devices">
-            <!-- kendriya vidyalaya no.1 bhopal -->
-            <div class="d-flex flex-column">
-              <!-- logo -->
-              <figure class="figure">
-                <img class="figure-img img-fluid" src="images/kendriya-vidyalaya-logo.jpeg" alt="Prashant Pandey Education">
-                <figcaption class="figure-caption">Kendriya Vidyalaya No.1, Bhopal</figcaption>
-              </figure>
-              <h6>I-XII Class (2001-2013)</h6>
-            </div>
-            <div class="d-flex flex-column">
-              <!-- logo -->
-              <figure class="figure">
-                <img class="figure-img img-fluid" src="images/JU-Logo.png" alt="Prashant Pandey Education">
-                <figcaption class="figure-caption">JECRC University, Jaipur</figcaption>
-              </figure>
-              <h6>B.Tech CSE (2014-2018)</h6>
+
+          <div class="work-experience">
+            <div class="work-experience-shadow">
+              <div class="work-experience-content">
+                <figure>
+                  <img src="images/youstart education.png" alt="Prashant Pandey">
+                </figure>
+                <div class="work-exp-responsibilities">
+                  <span>(Jan 2018 - Jul 2018)</span>
+
+                  <h3>Full Stack Developer Intern</h3>
+                  <h4>Youstart Labs Pvt. Ltd.</h4>
+
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
-        <!-- recommendations -->
-        <div class="row d-flex flex-column mt-5">
-          <h3>Recommendations</h3>
-          <div class="card ml-5 mr-5 mb-2 mt-2">
-            <div class="card-body">
-              <p class="card-text">
-                <blockquote class="blockquote">
-                  <p class="mb-0 text-justify">Prashant has a good energy and works enthusiastically towards any
-                    project. He inspires people around him to work together and has a good confidence. He is always
-                    curious about technologies and keep learning new things.</p>
-                  <footer class="blockquote-footer"><cite title="Source Title">Mr. Abhishek
-                      Rathore</cite>&nbsp;&nbsp;CEO,
-                    Youstart Labs Pvt. Ltd.</footer>
-                </blockquote>
+      </article>
+
+      <!-- skills -->
+      <!-- <article id="skills">
+        <h3 class="main-content-title">Skills</h3>
+        <div class="sub-content">
+          <h4>Programming Languages</h4>
+          <i class="fab fa-js-square fa-5x"></i>
+          <i class="fab fa-java fa-5x"></i>
+          <i class="fab fa-python fa-5x"></i>
+        </div>
+        <div class="sub-content">
+          <h4>Front End</h4>
+          <i class="fab fa-html5 fa-5x"></i>
+          <i class="fab fa-css3-alt fa-5x"></i>
+          <i class="fab fa-vuejs fa-5x"></i>
+          <i class="fab fa-react fa-5x"></i>
+        </div>
+        <div class="sub-content">
+          <h4>Back End</h4>
+          <i class="fab fa-node fa-5x"></i>
+          <i class="fab fa-php fa-5x"></i>
+        </div>
+        <div class="sub-content">
+          <h4>Databases</h4>
+          <span>MySQL</span>
+          <span>MongoDB</span>
+        </div>
+        <div class="sub-content">
+          <h4>Mobile Applications</h4>
+          <span>Android Native: Java</span>
+          <span>React-Native [Android and iOS]</span>
+        </div>
+        <div class="sub-content">
+          <h4>Cloud Computing Softwares</h4>
+          <span>Google Cloud Platform</span>
+          <span>Digital Ocean</span>
+          <span>Vultr</span>
+          <span>Amazon Web Services</span>
+        </div>
+      </article> -->
+
+      <!-- academic backgrounds -->
+      <article class="academic-background">
+        <h3 class="main-content-title">Academic Background</h3>
+        <ul class="academic-bg-list">
+          <li>
+            <!-- logo -->
+            <figure class="figure">
+              <img class="college-logo" src="./images/unc_charlotte.jpg" alt="Prashant Pandey Education">
+              <figcaption class="center">UNC Charlotte</figcaption>
+              <h4 class="center">Charlotte, USA</h4>
+              <h5 class="center">MS in IT</h5>
+              <h6 class="center">(2019-2021)</h6>
+            </figure>
+          </li>
+          <li>
+            <!-- logo -->
+            <figure class="figure">
+              <img class="college-logo" src="./images/JU-Logo.png" alt="Prashant Pandey Education">
+              <figcaption class="center">JECRC University</figcaption>
+              <h4 class="center">Jaipur, India</h4>
+              <h5 class="center">B.Tech CSE</h5>
+              <h6 class="center">(2014-2018)</h6>
+            </figure>
+          </li>
+          <li>
+            <!-- logo -->
+            <figure class="figure">
+              <img class="college-logo" src="./images/kendriya-vidyalaya-logo.jpeg" alt="Prashant Pandey Education">
+              <figcaption class="center">K.V. No.1</figcaption>
+              <h4 class="center">Bhopal, India</h4>
+              <h5 class="center">I - XII Class</h5>
+              <h6 class="center">(2001-2013)</h6>
+            </figure>
+          </li>
+        </ul>
+      </article>
+      <!-- recommendations -->
+      <article id="recommendations">
+        <h3 class="main-content-title">Recommendations</h3>
+        <div class="recommendation-content">
+          <div class="recommendation">
+            <div class="talk-bubble tri-right round btm-left">
+              <blockquote class="talktext recommendation-txt">
+                <p>Prashant has a good energy and works enthusiastically towards any
+                  project. He inspires people around him to work together and has a good confidence. He is always
+                  curious about technologies and keep learning new things.</p>
+              </blockquote>
+            </div>
+            <span class="recommender"><cite title="Source Title">Mr. Abhishek
+                Rathore</cite>&nbsp;&nbsp;CEO,
+              Youstart Labs Pvt. Ltd.</span>
+          </div>
+
+          <div class="recommendation">
+            <div class="talk-bubble tri-right round btm-left">
+              <blockquote class="talktext recommendation-txt">
+                <p>Prashant has the ability to comprehend conceptual ideas and make crucial
+                  inferences on the basis of the theory is remarkable. Over and over he has come up with innovative
+                  and interesting solutions to the problems that he comes across. He is self-motivated, goal
+                  oriented, hard working and fervent towards the tasks assigned to him. His most inspiring quality is
+                  that he makes it a point to finish what he starts.</p>
+              </blockquote>
+            </div>
+            <span class="recommender"><cite title="Source Title">Ms. Shivangi
+                Dheer</cite>&nbsp;&nbsp;Assistant
+              Professor, JECRC University, Jaipur</span>
+          </div>
+        </div>
+
+        <!-- </div>
+        <div class="card ml-5 mr-5 mb-2 mt-2">
+          <div class="card-body">
+            <p class="card-text">
+            <blockquote class="blockquote">
+              <p class="mb-0 text-justify">Prashant has the ability to comprehend conceptual ideas and make crucial
+                inferences on the basis of the theory is remarkable. Over and over he has come up with innovative
+                and interesting solutions to the problems that he comes across. He is self-motivated, goal
+                oriented, hard working and fervent towards the tasks assigned to him. His most inspiring quality is
+                that he makes it a point to finish what he starts.
               </p>
-            </div>
+              <footer class="blockquote-footer"><cite title="Source Title">Ms. Shivangi
+                  Dheer</cite>&nbsp;&nbsp;Assistant
+                Professor, JECRC University, Jaipur</footer>
+            </blockquote>
+            </p>
           </div>
-          <div class="card ml-5 mr-5 mb-2 mt-2">
-            <div class="card-body">
-              <p class="card-text">
-                <blockquote class="blockquote">
-                  <p class="mb-0 text-justify">Prashant has the ability to comprehend conceptual ideas and make crucial
-                    inferences on the basis of the theory is remarkable. Over and over he has come up with innovative
-                    and interesting solutions to the problems that he comes across. He is self-motivated, goal
-                    oriented, hard working and fervent towards the tasks assigned to him. His most inspiring quality is
-                    that he makes it a point to finish what he starts.
-                  </p>
-                  <footer class="blockquote-footer"><cite title="Source Title">Ms. Shivangi
-                      Dheer</cite>&nbsp;&nbsp;Assistant
-                    Professor, JECRC University, Jaipur</footer>
-                </blockquote>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </div> -->
+      </article>
+
     </div>
   </section>
   <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
-          <ul class="wow fadeInUp social-icon" data-wow-delay="0.6s">
-            <li><a href="https://www.facebook.com/prashantpandey22" class="fa fa-facebook"></a></li>
-            <li><a href="https://twitter.com/PrashantP_1996" class="fa fa-twitter"></a></li>
-            <li><a href="https://plus.google.com/u/0/109914941613869643949" class="fa fa-google-plus"></a></li>
-            <li><a href="https://www.linkedin.com/in/prashant-pandey-b070b5105/" class="fa fa-linkedin"></a></li>
-          </ul>
-        </div>
-      </div>
+      Copyright © Prashant Pandey
     </div>
   </footer>
-  <!-- Facebook Pixel Code -->
-  <script>
-    ! function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '288719738695763');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=288719738695763&ev=PageView&noscript=1" alt="Prashant Pandey" /></noscript>
-  <!-- End Facebook Pixel Code -->
-  <script src="js/javascripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js'></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/javascripts.js" defer></script>
 </body>
 
 </html>

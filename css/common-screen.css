@@ -1,0 +1,391 @@
+#projects button:disabled {
+    display: none;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background: rgb(255 254 242);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    /* overflow-x: hidden; */
+    font-size: 10px;
+}
+
+.side-content p, .side-content h1, .side-content h2, .side-content h3, .side-content h4, .side-content h5, .side-content h6 {
+    background-color: rgb(255 254 242);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#website-title {
+    position: absolute;
+}
+
+header {
+    display: grid;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    perspective: 100px;
+}
+
+#main-nav {
+    float: right;
+}
+
+#main-nav ul {
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.facebook {
+    color: #1877f2;
+}
+
+.twitter {
+    color: #1da1f2;
+}
+
+.linkedin {
+    color: #007bb5;
+}
+
+.github {
+    color: #333;
+}
+
+.side-content-title {
+    font-size: 2em;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#work-experience {
+    display: flex;
+    flex-direction: column;
+}
+
+#work-experiences {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    padding: 0 1.4rem;
+}
+
+.work-experience {
+    margin: 2rem 4.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    max-width: 33%;
+}
+
+.work-experience-shadow {
+    display: flex;
+    position: relative;
+}
+
+.work-experience-shadow::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: repeating-linear-gradient(-24deg, rgb(255 254 242), rgb(255 254 242) 3px, #630707 0, #630707 4px);
+    height: 100%;
+    width: 100%;
+    margin-top: -16px;
+    margin-left: -16px;
+    border: 1px solid #333;
+}
+
+.work-experience-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.3em;
+    border: 1px solid #333;
+    background-color: #fffbfb;
+    perspective: 100px;
+    z-index: 10;
+    transition: all 0.1s ease-in;
+    padding: 1rem;
+    height: 12em;
+    width: 30rem;
+}
+
+.work-experience-content:hover {
+    transform: translateX(-16px) translateY(-16px) translateZ(10px);
+}
+
+.work-experience figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6em;
+}
+
+.work-experience figcaption {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.work-experience img {
+    max-width: 6em;
+}
+
+.work-experience .work-exp-responsibilities {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-experience .work-exp-responsibilities span {
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+
+.work-experience .work-exp-responsibilities h4 {
+    font-size: 1.3em;
+}
+
+.work-experience .work-exp-responsibilities h3 {
+    font-size: 1.5em;
+}
+
+.work-experience .work-exp-responsibilities ul li {
+    font-size: 1.2em;
+    list-style-type: disc;
+    margin-left: 1.3em;
+}
+
+.flickity-page-dots {
+    display: none;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    perspective: 1000px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    transition: all 60ms ease;
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 150ch;
+    /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .modal-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". . .";
+}
+
+.modal-content .modal-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+.modal-content .modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content .modal-body form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100ch;
+}
+
+.modal-content .modal-body form input, .modal-content .modal-body form textarea {
+    padding: 0.4rem;
+    margin: 0.4rem 0;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* preloader */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
+}
+
+.spinner {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    position: relative;
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #E3AE57;
+    border-top-color: #f9f9f9;
+    animation: spinner .6s linear infinite;
+}
+
+@-webkit-@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.common-message-style{
+    display: none;
+}
+
+#form-success-message p{
+    background-color: #9ae688;
+    color: #148d2e;
+}
+
+
+#form-error-message p{
+    background-color: #f03e3e;
+    color: #8d1414;
+}
+
+
+
+.common-message-style p{
+    max-width: 30ch;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.common-message-style i{
+    font-size: 1.4rem;
+    padding-right: 0.8rem;
+}
