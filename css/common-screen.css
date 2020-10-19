@@ -389,3 +389,11 @@ header {
     font-size: 1.4rem;
     padding-right: 0.8rem;
 }
+
+#bg-data{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100000;
+    color: transparent;
+}
