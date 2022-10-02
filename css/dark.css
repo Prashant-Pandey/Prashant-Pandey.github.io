@@ -1,0 +1,18 @@
+body[data-theme="dark"]{
+    --body_bg_color: #252323;
+    --body_text_color: #eae9e9;
+    --top_bar_bg_color: #0e2940;
+    --top_bar_text_color: #ffffff;
+    --brand_row_bg_color: #193d6c;
+    --brand_row_text_color: #e3e3e3;
+    --social_icons_text_color: #b9b9b9;
+    --social_anchor_hover_color: #74a5f0;
+    --latest_adventure_bg_color: #1f559c;
+    --latest_adventure_text_color: #ffffff;
+    --post_divider_color: #EBF2F6;
+    --anchor_color: #74a5f0;
+    --post_title_color: #50585D;
+    --post_anchor_hover_color: #a9c5f0;
+    --footer_bg_color: #0e2940;
+    --footer_text_color: #c6c6c6;
+}
